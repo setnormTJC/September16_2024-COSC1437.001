@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="September16_2024-COSC1437.001.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="someStructDefinitions.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

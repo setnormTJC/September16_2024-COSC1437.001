@@ -1,57 +1,97 @@
 
-#include <iostream>
-#include <vector>
+#include "iostream"
+#include "vector"
 
+//quotes are for "your own" 
+//angle brackets are for "standard ones" 
+//g++
+//msvc
 
-struct ShoeRecord
+#include"iomanip"
+
+#include"someStructDefinitions.h"
+
+using std::left; 
+using std::cout; 
+using std::setw; //aliases 
+using std::cin; 
+
+void addOneToAge(Person& somePerson)
 {
-    std::string name; 
-    double price; 
-    int rating; //number of stars on review average 
 
-};
+    //cout << &somePerson 
+    somePerson.age++; 
 
-struct RPGCharacter
-{
-
-};
-
-struct Mage : RPGCharacter
-{
-
-};
-
-struct Person//PascalCase (not camelCase)
-{
-    int age; //years 
-
-    double weight; //how much they weigh 
-
-    std::string name;
-    
-};
+    //cout << a << "\n";
+}
 
 void printPeople(const std::vector<Person>& people)
 {
-    std::cout << "Name\tAge\tWeight\n";
+    std::cout << std::left << std::setw(15) << "Name"; 
+    std::cout << std::left << std::setw(5) << "Age";
+    std::cout << std::left << std::setw(10) << "Weight";
+    cout << "\n";
     for (auto& thePerson : people) //range-based for loop 
     {
-        std::cout << thePerson.name << "\t" << thePerson.age << "\t" << thePerson.weight << "\n";
+        std::cout << std::left << setw(15) << thePerson.name;
+        std::cout << std::left << setw(5) << thePerson.age;
+        cout << left << setw(10) << thePerson.weight << "\n";
     }
 }
 
 int main()
 {
+    Person otherPerson = { 7, 43.5, "Abby" };
+
+    addOneToAge(otherPerson); 
+
+    cout << "Was the age updated? (from 7 to 8)? " << otherPerson.age << "\n";
+    otherPerson.age = 123; 
+    otherPerson.name = "Some name"; 
+
     Person me = { 36, 163.5, "Seth Norman" };
     Person she = { 89, 122.6, "Alice" };
    
     std::vector<Person> people = { me, she }; 
+
     std::cout << "The ZEROTH person in the list of people has age = " << people[0].age << "\n";
     std::cout << "The ZEROTH person in the list of people has NAME LENGTH = " << people[0].name.length() << "\n";
-    people.push_back({12, 95.5, "Bob"}); //creation of a anonymous person "in place" 
+    people.push_back({12, 95.5, "Bob"}); //creation of a anonymous person "inplace" 
 
     printPeople(people); 
 
+    cout << "Adding a NEW person to the list: \n";
+    system("pause"); 
+    system("CLS"); 
+    cout << "Enter the person's age, weight, and name:\n";
+    Person newPerson; 
+    cin >> newPerson.age>> newPerson.weight>> newPerson.name;
+    //if (cin.fail())
+    //{
+    //    cin.clear()
+    //}
+
+
+    people.push_back(newPerson);
+
+    cout << "\n\nUpdated list contains:\n";
+    printPeople(people); 
+
+    //std::sort()
+
+    if (newPerson.age > me.age)
+    {
+        cout << "The new person is old than me\n";
+    }
+
+    //std::filesystem;
+    //std::chrono
+
+
+    if (she.name.length() > me.name.length())
+    {
+        cout << she.name << " is a longer name than " << me.name << "\n";
+    }
 
     //ShoeRecord myShoe = { "Olympus Altra", 99.99, 123 };
     ////std::cout << myShoe << "\n"; //?
