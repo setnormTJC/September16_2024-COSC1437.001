@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Donut.cpp" />
     <ClCompile Include="StartingTopic2-Classes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Donut.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

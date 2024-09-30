@@ -5,6 +5,7 @@
 
 #include<string> 
 #include <vector>
+#include "Donut.h"
 
 using std::string; 
 using std::cout; 
@@ -16,7 +17,7 @@ class Shirt
     // is that all members of a struct are PUBLIC by default 
     //and CLASSES have all PRIVATE members by default 
 
-private: //this is an "access specifier/modifier" 
+//private: //this is an "access specifier/modifier" 
 
     string size = "size ALSO TBD"; //ex: "Small", "Medium", XXL 
 
@@ -25,16 +26,27 @@ private: //this is an "access specifier/modifier"
     double cost = 0.00; 
 
     //"member functions: 
-    //"getter" function (a function that GETS a member variable)
+    //"getter" function (a function that GETS a member variable) -> also called an "accessor" function 
 public: 
 
     /*This constructor takes ZERO arguments -> and that means it is called the 
     "DEFAULT" constructor*/
-    Shirt()
+    
+    Shirt()/* = delete;*/ //deleting the default constructor MIGHT be desirable in "certain circumstances" 
     {
         size = "Size yet to be initialized"; 
         color = "Color will be updated later";
         cost = -999.99; 
+    }
+
+    /*This is a constructor OVERLOAD that takes 3 params
+    @param size -> MUST be medium, large, or small  
+    */
+    Shirt(string clientSpecifiedSize, string color, double cost)
+    {
+        size = clientSpecifiedSize;
+        this->color = color; 
+        this->cost = cost; 
     }
 
     void printMemberVars()
@@ -72,10 +84,16 @@ public:
     /*a goofy example of a function calling another private function defined in this class*/
     void doSomething();
     /*add 600 more member variables and functions so that we have "perfect" encapsulation of what a shirt is?*/
+
+
+    bool isSameShirt(const Shirt& otherShirt); //function DECLARATION ("prototype")
+
 };
 
 
 void doSomething(); //this is a function "prototype"/declaration 
+
+//void printFruit(const Fruit& someApple)
 
 
 /*The main function can be called a "client" that uses the Shirt class
@@ -83,11 +101,26 @@ void doSomething(); //this is a function "prototype"/declaration
 */
 int main()
 {
-
+    //Shirt myShirt{}
     //std::cout 
-    Shirt yourShirt;
+    Shirt yourShirt{}; //"default constructor" (also exists in Python and Java) 
+    Shirt copyOfYourShirt = yourShirt; //works as expected ... ( "copy assignment operator" ) 
+    //int a = 123; 
 
+    cout << "The details of the ORIGINAL shirt:\n";
     yourShirt.printMemberVars(); 
+
+    cout << "The details of the COPY: \n";
+    copyOfYourShirt.setSize("adsfasdfasdf");
+
+    copyOfYourShirt.printMemberVars(); 
+
+
+
+    cout << "Same shirt? " << std::boolalpha << yourShirt.isSameShirt(copyOfYourShirt) << "\n";
+    //Shirt herShirt{ "medium", "red", 19.99 }; 
+    //herShirt.printMemberVars(); 
+
 
     //yourShirt.getCost(); 
 
@@ -121,8 +154,15 @@ int main()
 
     ////std::cout << "Hello World!\n";
 
+    cout << "\n\n\nBegin donut stuff...\n";
+    Donut someDonut;
+    someDonut.caloricContent = 12345;
+    someDonut.hasSprinkles = true;
+    someDonut.isGlazed = false;
 
-}
+    someDonut.printDonutDetails();
+
+} //end main 
 
 void doSomething() //function definition 
 {
@@ -138,4 +178,13 @@ double Shirt::getCost() const
 void Shirt::doSomething()
 {
     cout << "Doing something in the SHIRT class...\n";
+}
+
+bool Shirt::isSameShirt(const Shirt& otherShirt)
+{
+    return (this->color == otherShirt.color
+        and
+        this->cost == otherShirt.cost
+        &&
+        this->size == otherShirt.size);
 }

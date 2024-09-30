@@ -18,5 +18,13 @@
     <ClCompile Include="StartingTopic2-Classes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Donut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Donut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

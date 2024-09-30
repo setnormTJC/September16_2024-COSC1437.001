@@ -11,6 +11,7 @@
 
 #include"someStructDefinitions.h"
 
+
 using std::left; 
 using std::cout; 
 using std::setw; //aliases 
@@ -18,6 +19,8 @@ using std::cin;
 
 int main()
 {
+
+
 
     auto thePerson = makePerson(); 
     
