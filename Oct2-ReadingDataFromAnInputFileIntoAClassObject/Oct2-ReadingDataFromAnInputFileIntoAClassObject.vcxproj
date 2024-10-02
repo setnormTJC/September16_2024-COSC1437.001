@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{19048fbe-b074-4c31-9618-5241a1c96c68}</ProjectGuid>
-    <RootNamespace>StartingTopic2Classes</RootNamespace>
+    <ProjectGuid>{2204aa28-f984-4a5d-bd3c-61cb794e162f}</ProjectGuid>
+    <RootNamespace>Oct2ReadingDataFromAnInputFileIntoAClassObject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,14 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Donut.cpp" />
-    <ClCompile Include="CLIENT.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Donut.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClCompile Include="Oct2-ReadingDataFromAnInputFileIntoAClassObject.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

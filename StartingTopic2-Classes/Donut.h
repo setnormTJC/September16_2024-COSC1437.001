@@ -15,5 +15,7 @@ public:
 	//{
 		/*function details are perhaps a secret to everyone*/
 	//}
-};
 
+	/*this is the DEFAULT constructor (takes 0 args/inputs)*/
+	Donut(); 
+};

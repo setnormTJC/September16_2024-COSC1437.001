@@ -101,6 +101,13 @@ void doSomething(); //this is a function "prototype"/declaration
 */
 int main()
 {
+
+    Donut someDonut; //somePig
+    someDonut.
+
+    //__debugbreak(); 
+
+
     //Shirt myShirt{}
     //std::cout 
     Shirt yourShirt{}; //"default constructor" (also exists in Python and Java) 

@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OneStudentSubmissionOfStruc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StartingTopic2-Classes", "StartingTopic2-Classes\StartingTopic2-Classes.vcxproj", "{19048FBE-B074-4C31-9618-5241A1C96C68}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Oct2-ReadingDataFromAnInputFileIntoAClassObject", "Oct2-ReadingDataFromAnInputFileIntoAClassObject\Oct2-ReadingDataFromAnInputFileIntoAClassObject.vcxproj", "{2204AA28-F984-4A5D-BD3C-61CB794E162F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{19048FBE-B074-4C31-9618-5241A1C96C68}.Release|x64.Build.0 = Release|x64
 		{19048FBE-B074-4C31-9618-5241A1C96C68}.Release|x86.ActiveCfg = Release|Win32
 		{19048FBE-B074-4C31-9618-5241A1C96C68}.Release|x86.Build.0 = Release|Win32
+		{2204AA28-F984-4A5D-BD3C-61CB794E162F}.Debug|x64.ActiveCfg = Debug|x64
+		{2204AA28-F984-4A5D-BD3C-61CB794E162F}.Debug|x64.Build.0 = Debug|x64
+		{2204AA28-F984-4A5D-BD3C-61CB794E162F}.Debug|x86.ActiveCfg = Debug|Win32
+		{2204AA28-F984-4A5D-BD3C-61CB794E162F}.Debug|x86.Build.0 = Debug|Win32
+		{2204AA28-F984-4A5D-BD3C-61CB794E162F}.Release|x64.ActiveCfg = Release|x64
+		{2204AA28-F984-4A5D-BD3C-61CB794E162F}.Release|x64.Build.0 = Release|x64
+		{2204AA28-F984-4A5D-BD3C-61CB794E162F}.Release|x86.ActiveCfg = Release|Win32
+		{2204AA28-F984-4A5D-BD3C-61CB794E162F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
