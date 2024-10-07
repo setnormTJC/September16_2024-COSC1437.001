@@ -58,7 +58,7 @@ int main()
 	cout << "FOUND! Hooray! Huzaah!\n";
 	
 	std::vector<Point> points; 
-
+	//Point otherPointsArray[100] 
 	while (!fin.eof())
 	{
 		double x1, y1; 
@@ -66,6 +66,8 @@ int main()
 
 		points.push_back(Point{ x1, y1 });
 	}
+
+	fin.close(); 
 
 	for (int i = 0; i < points.size(); i++)
 	{
